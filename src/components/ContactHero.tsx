@@ -1,46 +1,29 @@
 export default function ContactHero() {
   return (
-    <section className="relative w-full h-[50vh] min-h-[400px] md:h-[450px] lg:h-[550px] flex items-center overflow-hidden bg-[#EBF3F8]">
+    <section className="relative w-full h-[55vh] min-h-[400px] md:h-[500px] lg:h-[550px] overflow-hidden bg-navos-navy">
       
       {/* Background Images */}
-      <div className="absolute inset-0 w-full h-full">
-        <img 
-          src="/contact-hero-mobile.jpeg" 
-          alt="Contact Navos" 
-          className="w-full h-full object-cover block md:hidden"
-        />
-        <img 
-          src="/contact-hero-desktop.jpeg" 
-          alt="Contact Navos" 
-          className="w-full h-full object-cover object-right hidden md:block"
-        />
-      </div>
-
-      {/* Gradients to fade the image into the background color for text readability */}
-      {/* Desktop Gradient (Fades Left to Right) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#EBF3F8] via-[#EBF3F8]/90 to-transparent hidden md:block w-[70%]"></div>
+      <img 
+        src="/contact-hero-mobile.png" 
+        alt="Contact Navos" 
+        className="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
+      />
+      <img 
+        src="/contact-hero-desktop.png" 
+        alt="Contact Navos" 
+        className="absolute inset-0 w-full h-full  object-center hidden md:block"
+      />
       
-      {/* Mobile Gradient (Fades Top to Bottom) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#EBF3F8] via-[#EBF3F8]/80 to-transparent block md:hidden h-[80%]"></div>
-
-      {/* Content Container */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-[60px] flex flex-col items-start text-left">
-        
-        {/* Breadcrumb */}
-        <div className="text-[13px] md:text-sm font-medium mb-4 text-navos-teal">
-          <a href="/" className="hover:text-teal-700 transition-colors">Home</a>
-          <span className="mx-2 text-gray-400">/</span>
-          <span className="text-navos-navy">Contact</span>
-        </div>
-
-        <h1 className="text-navos-navy font-black text-4xl md:text-5xl lg:text-[64px] leading-[1.1] mb-3 md:mb-5 tracking-tight uppercase">
-          Let's Connect
-        </h1>
-        <p className="text-gray-700 text-[15px] md:text-lg lg:text-xl font-medium max-w-[450px]">
-          Have a question or need maritime assistance? We are here to help.
-        </p>
+      {/* Beautiful Multi-Layer Wave Overlay */}
+      <div className="absolute bottom-0 left-0 w-full leading-none z-10 translate-y-[1px]">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-[50px] md:h-[100px] lg:h-[150px]">
+          <path d="M0,40 C280,100 540,0 900,40 C1200,70 1350,10 1440,0 L1440,120 L0,120 Z" fill="#00A3A3" fillOpacity="0.6" />
+          <path d="M0,70 C300,120 600,20 960,70 C1200,100 1350,40 1440,20 L1440,120 L0,120 Z" fill="#0B1B3D" fillOpacity="0.8" />
+          {/* Matches the #F4F7F9 background of the ContactForm section below it */}
+          <path d="M0,100 C320,60 640,120 1000,70 C1200,40 1350,80 1440,50 L1440,120 L0,120 Z" fill="#F4F7F9" />
+        </svg>
       </div>
-
+      
     </section>
   );
 }

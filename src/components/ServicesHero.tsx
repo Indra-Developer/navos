@@ -1,44 +1,28 @@
 export default function ServicesHero() {
   return (
-    <section className="relative w-full h-[60vh] min-h-[450px] md:h-[550px] lg:h-[650px] flex items-center justify-center overflow-hidden bg-white">
+    <section className="relative w-full h-[55vh] min-h-[400px] md:h-[500px] lg:h-[550px] overflow-hidden bg-navos-navy">
       
       {/* Background Images */}
       <img 
-        src="/services-hero-mobile.jpeg" 
+        src="/services-hero-mobile.png" 
         alt="Navos Services" 
-        className="absolute inset-0 w-full h-full object-cover block md:hidden"
+        className="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
       />
       <img 
-        src="/services-hero-desktop.jpeg" 
+        src="/services-hero-desktop.png" 
         alt="Navos Services" 
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        className="absolute inset-0 w-full h-full  object-center hidden md:block"
       />
-
-      {/* Dark Overlay (Desktop Only - Mobile keeps full color) */}
-      <div className="absolute inset-0 bg-navos-navy/40 mix-blend-multiply hidden md:block"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navos-navy/20 to-navos-navy/70 hidden md:block"></div>
       
-      {/* Light Overlay (Mobile Only - So dark text is readable) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-transparent block md:hidden z-0"></div>
-
-      {/* Centered Content */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-[60px] flex flex-col items-start md:items-center text-left md:text-center mt-[-40px] md:mt-0">
-        
-        {/* Breadcrumb */}
-        <div className="text-[13px] md:text-sm font-medium mb-4 text-navos-navy md:text-gray-300">
-          <a href="#" className="hover:text-navos-teal transition-colors">Home</a>
-          <span className="mx-2">/</span>
-          <span className="text-navos-teal md:text-white">Services</span>
-        </div>
-
-        <h1 className="text-navos-navy md:text-white font-extrabold text-4xl md:text-5xl lg:text-[64px] leading-[1.1] mb-3 md:mb-5 tracking-tight drop-shadow-sm md:drop-shadow-xl uppercase">
-          Our Services
-        </h1>
-        <p className="text-gray-800 md:text-gray-100 text-[15px] md:text-lg lg:text-xl font-medium drop-shadow-none md:drop-shadow-md max-w-[650px] mx-0 md:mx-auto">
-          Solutions and connections for every part of the maritime community.
-        </p>
+      {/* Beautiful Multi-Layer Wave Overlay */}
+      <div className="absolute bottom-0 left-0 w-full leading-none z-10 translate-y-[1px]">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-[50px] md:h-[100px] lg:h-[150px]">
+          <path d="M0,40 C280,100 540,0 900,40 C1200,70 1350,10 1440,0 L1440,120 L0,120 Z" fill="#00A3A3" fillOpacity="0.6" />
+          <path d="M0,70 C300,120 600,20 960,70 C1200,100 1350,40 1440,20 L1440,120 L0,120 Z" fill="#0B1B3D" fillOpacity="0.8" />
+          <path d="M0,100 C320,60 640,120 1000,70 C1200,40 1350,80 1440,50 L1440,120 L0,120 Z" fill="#FFFFFF" />
+        </svg>
       </div>
-
+      
     </section>
   );
 }

@@ -11,9 +11,9 @@ export default function About() {
       <AboutHero />
       <AboutStory />
       <AboutTeam /> {/* <-- New Team Component Added Here */}
-      <AboutVisionMission />
+      {/* <AboutVisionMission />
       <AboutCoreValues />
-      <AboutCTA />
+      <AboutCTA /> */}
     </>
   );
 }

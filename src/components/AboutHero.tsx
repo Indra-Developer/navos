@@ -1,6 +1,6 @@
 export default function AboutHero() {
   return (
-    <section className="relative w-full h-[55vh] min-h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-navos-navy">
+    <section className="relative w-full h-[55vh] min-h-[400px] md:h-[500px] lg:h-[560px] overflow-hidden bg-navos-navy">
       
       {/* Background Images */}
       <img 

@@ -8,7 +8,7 @@ export default function Header() {
   const location = useLocation();
 
   const phoneNumber = "6304963771";
-  const formattedPhone = "+91 " + phoneNumber;
+  // const formattedPhone = "+91 " + phoneNumber;
 
   const closeMenu = () => setIsMobileMenuOpen(false);
   const isActive = (path: string) => location.pathname === path;
